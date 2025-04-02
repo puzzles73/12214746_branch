@@ -1,10 +1,19 @@
-import json import yaml
-with open ( 'myfile.json'
-, 'r') as json_file:
-ourjson = json. load (json_file)
-print (ourjson)
-print ("The access token is: {}", format(ourjson['access_token']))
-seconds.", format (ourjson[ 'expires_in'l))
-print ("\n\n--")
-print (yaml. dump (ourjson, default_flow_style=False))
-print( 'Adam is here')
+import json
+import yaml
+
+# Open and load JSON file
+with open('myfile.json', 'r') as json_file:
+    ourjson = json.load(json_file)
+
+# Print JSON dictionary
+print(ourjson)
+
+# Correct string formatting
+print("The access token is: {}".format(ourjson['access_token']))
+print("The token expires in {} seconds.".format(ourjson['expires_in']))
+
+# Convert JSON to YAML format and print
+print("\n\n--")
+print(yaml.dump(ourjson, default_flow_style=False))
+
+print('Adam is here')
